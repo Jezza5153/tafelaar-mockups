@@ -32,6 +32,10 @@ h1{font-family:'Fraunces',serif;font-weight:550;font-size:clamp(30px,4.5vw,46px)
 .tag{font-size:11px;font-weight:600;letter-spacing:.03em;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--soft)}
 .open{display:inline-flex;margin-top:16px;font-weight:600;font-size:13.5px;color:var(--acc)}
 .card:hover .open{text-decoration:underline;text-underline-offset:3px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+@media(max-width:920px){.grid3{grid-template-columns:1fr}}
+.fav{border:2px solid var(--acc);position:relative;box-shadow:0 4px 18px rgba(169,123,74,.18)}
+.fav::before{content:"★ Favoriet";position:absolute;top:12px;left:12px;z-index:2;background:var(--acc);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
 .note{margin-top:48px;padding:22px 26px;background:#fff;border:1px solid var(--line);border-radius:16px;font-size:14px;color:var(--soft)}
 .note b{color:var(--ink)}
 .note ul{margin:10px 0 0 18px;display:grid;gap:5px}
@@ -40,8 +44,50 @@ h1{font-family:'Fraunces',serif;font-weight:550;font-size:clamp(30px,4.5vw,46px)
 </head>
 <body>
 <div class="wrap">
-  <h1>De Tafelaar — 20 moderne mockups</h1>
-  <p class="sub">Twintig verschillende design­richtingen voor tafelaaramersfoort.nl. <b>Alle bestaande content is behouden</b> in elke variant: hero-teksten, USP's, buurtgids, SEO-tekst met alle interne links, verhaal, openingstijden, NAP-gegevens en alle 8 FAQ's — plus Restaurant- en FAQ-schema (JSON-LD). Klik op een kaart om te openen; rechtsonder op elke pagina wissel je direct tussen alle varianten.</p>
+  <h1>De Tafelaar — nieuwe homepage</h1>
+  <p class="sub"><b>Dit zijn de drie favorieten</b> — de richting waar we naartoe werken. Alles daaronder is brainstorm-archief. In elke variant is alle bestaande content behouden: hero-teksten, USP's, buurtgids, SEO-tekst, openingstijden, NAP en alle 8 FAQ's. Klik op een kaart om te openen; rechtsonder wissel je tussen alle varianten.</p>
+
+  <div class="round-label">★ De favorieten <span class="tag">dit zijn ze — deel deze drie</span></div>
+  <div class="grid3">
+    <a class="card fav" href="4-karakter-bold.html">
+      <div class="swatch" style="background:linear-gradient(120deg,#D9502B,#E8A93D)">
+        <span class="dot" style="background:#F5F0E6"></span><span class="dot" style="background:#191713"></span><span class="dot" style="background:#3E5C43"></span>
+        <span class="num">4</span>
+      </div>
+      <div class="body">
+        <h2>Karakter &amp; Bold</h2>
+        <p>Eigenzinnig: grote vette koppen, paprika-oranje en mosterd, harde randen met schaduwblokken, USP-ticker en 4.8-sticker.</p>
+        <div class="tags"><span class="tag">Archivo + Space Grotesk</span><span class="tag">Paprika / mosterd</span></div>
+        <span class="open">Bekijk mockup →</span>
+      </div>
+    </a>
+    <a class="card fav" href="17-mondriaan.html">
+      <div class="swatch" style="background:linear-gradient(120deg,#F6F4ED 0 30%,#CC3A28 30% 55%,#F2C037 55% 78%,#2A56A8 78%)">
+        <span class="dot" style="background:#17150F"></span><span class="dot" style="background:#FFFFFF"></span><span class="dot" style="background:#CC3A28"></span>
+        <span class="num" style="color:rgba(23,21,15,.8)">17</span>
+      </div>
+      <div class="body">
+        <h2>Mondriaan</h2>
+        <p>Zwarte kaderlijnen, witte vlakken en primaire accenten — met een knipoog naar stadsgenoot Piet Mondriaan. Gallery-grade en onmiskenbaar lokaal.</p>
+        <div class="tags"><span class="tag">Anton + Public Sans</span><span class="tag">Rood / geel / blauw</span></div>
+        <span class="open">Bekijk mockup →</span>
+      </div>
+    </a>
+    <a class="card fav" href="13-seizoen-makers.html">
+      <div class="swatch" style="background:linear-gradient(120deg,#55743F,#3E5730)">
+        <span class="dot" style="background:#EFE6D2"></span><span class="dot" style="background:#C4472F"></span><span class="dot" style="background:#FFF9EE"></span>
+        <span class="num">13</span>
+      </div>
+      <div class="body">
+        <h2>Seizoen &amp; Makers</h2>
+        <p>Het seizoen bepaalt de pagina: "nu op tafel"-kaart met maandenbalk en de echte makers (Het Derde Erf, De IJsmakerij, Rock City…) als kratlabels.</p>
+        <div class="tags"><span class="tag">Zilla Slab + Karla</span><span class="tag">Kraft / groen</span></div>
+        <span class="open">Bekijk mockup →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="round-label" style="margin-top:64px">Brainstorm-archief <span class="tag">de andere 17 verkenningen</span></div>
 
   <div class="round-label">Ronde 1 — verfijnd <span class="tag">veiliger, restaurant-klassiek</span></div>
   <div class="grid">
@@ -78,18 +124,6 @@ h1{font-family:'Fraunces',serif;font-weight:550;font-size:clamp(30px,4.5vw,46px)
         <h2>Fris &amp; Licht</h2>
         <p>Scandinavisch licht met saliegroen: zwevende navigatie, bento-grid met foto's, zachte schaduwen. Jong, toegankelijk, duurzaam.</p>
         <div class="tags"><span class="tag">DM Sans + DM Serif</span><span class="tag">Wit / salie</span><span class="tag">Modern-clean</span></div>
-        <span class="open">Bekijk mockup →</span>
-      </div>
-    </a>
-    <a class="card" href="4-karakter-bold.html">
-      <div class="swatch" style="background:linear-gradient(120deg,#D9502B,#E8A93D)">
-        <span class="dot" style="background:#F5F0E6"></span><span class="dot" style="background:#191713"></span><span class="dot" style="background:#3E5C43"></span>
-        <span class="num">4</span>
-      </div>
-      <div class="body">
-        <h2>Karakter &amp; Bold</h2>
-        <p>Eigenzinnig: grote vette koppen, paprika-oranje en mosterd, harde randen met schaduwblokken, USP-ticker en 4.8-sticker.</p>
-        <div class="tags"><span class="tag">Archivo + Space Grotesk</span><span class="tag">Paprika / mosterd</span><span class="tag">Onderscheidend</span></div>
         <span class="open">Bekijk mockup →</span>
       </div>
     </a>
@@ -197,18 +231,6 @@ h1{font-family:'Fraunces',serif;font-weight:550;font-size:clamp(30px,4.5vw,46px)
         <span class="open">Bekijk mockup →</span>
       </div>
     </a>
-    <a class="card" href="13-seizoen-makers.html">
-      <div class="swatch" style="background:linear-gradient(120deg,#55743F,#3E5730)">
-        <span class="dot" style="background:#EFE6D2"></span><span class="dot" style="background:#C4472F"></span><span class="dot" style="background:#FFF9EE"></span>
-        <span class="num">13</span>
-      </div>
-      <div class="body">
-        <h2>Seizoen &amp; Makers</h2>
-        <p>Het seizoen bepaalt de pagina: "nu op tafel"-kaart met maandenbalk en de echte makers (Het Derde Erf, De IJsmakerij, Rock City, Korte Garde…) als kratlabels.</p>
-        <div class="tags"><span class="tag">Zilla Slab + Karla</span><span class="tag">Kraft / groen</span><span class="tag">Product-eerst</span></div>
-        <span class="open">Bekijk mockup →</span>
-      </div>
-    </a>
     <a class="card" href="14-getekend.html">
       <div class="swatch" style="background:linear-gradient(120deg,#2B4F8C,#1E3A6B)">
         <span class="dot" style="background:#FBF6EC"></span><span class="dot" style="background:#E2604A"></span><span class="dot" style="background:#2B4F8C"></span>
@@ -246,18 +268,6 @@ h1{font-family:'Fraunces',serif;font-weight:550;font-size:clamp(30px,4.5vw,46px)
         <h2>De Aanschuiftafel</h2>
         <p>Jullie concept letterlijk: één lange houten tafel loopt als ruggengraat over de hele pagina, met borden (foto's) erop en kaartjes links en rechts — schuif aan en scroll de tafel af.</p>
         <div class="tags"><span class="tag">Gelasio + Hanken Grotesk</span><span class="tag">Eiken / linnen</span><span class="tag">Meest eigen concept</span></div>
-        <span class="open">Bekijk mockup →</span>
-      </div>
-    </a>
-    <a class="card" href="17-mondriaan.html">
-      <div class="swatch" style="background:linear-gradient(120deg,#F6F4ED 0 30%,#CC3A28 30% 55%,#F2C037 55% 78%,#2A56A8 78%)">
-        <span class="dot" style="background:#17150F"></span><span class="dot" style="background:#FFFFFF"></span><span class="dot" style="background:#CC3A28"></span>
-        <span class="num" style="color:rgba(23,21,15,.8)">17</span>
-      </div>
-      <div class="body">
-        <h2>Mondriaan</h2>
-        <p>Zwarte kaderlijnen, witte vlakken en primaire accenten — als compositie, met een knipoog naar stadsgenoot Piet Mondriaan (geboren in Amersfoort). Gallery-grade en onmiskenbaar lokaal.</p>
-        <div class="tags"><span class="tag">Anton + Public Sans</span><span class="tag">Rood / geel / blauw</span><span class="tag">Kunst-lokaal</span></div>
         <span class="open">Bekijk mockup →</span>
       </div>
     </a>
